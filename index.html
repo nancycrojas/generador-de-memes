@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de memes</title>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans&display=swap" rel="stylesheet">
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--Comienzo del header-->
+    <header id="header">
+        <h1 class="title">Generador de Memes</h1>
+        <nav class="nav-buttons">
+            <ul>
+                <li><button class="btn"><i class="fa-solid fa-image"></i>Imagen</button></li>
+                <li><button class="btn"><i class="fa-solid fa-font"></i>Texto</button></li>
+                <li><button id="btn" class="btn"><i class="fa-solid fa-lightbulb"></i>Modo Claro</button></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Fin del header-->
+    <!--Comienzo del main-->
+    <main class="container-meme" id="container">
+        <div class="canvas-meme">
+            <p class="image-text">Top Text</p>
+            <div class="image-meme"></div>
+            <p class="image-text">Bottom Text</p>
+        </div>
+        <button class="dowloand-button"><i class="fa-solid fa-download"></i>Descargar meme</button>
+    
+        <aside class="panel" id="aside">
+            <div class="image-aside-container">
+                <form action="">
+                    <h2>IMAGEN</h2>
+                    <div>
+                        <label for="">URL</label>
+                        <input type="url" id="" name="" value="">
+                    </div>
+                    <div>
+                        <label for="">Fondo</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Efecto</label>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+
+                        </select>
+                    </div> 
+                    <div>
+                        <label for="">Filtros</label>
+                        <input type="text">
+                    </div>
+                </form>
+            </div>   
+
+        </aside>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
