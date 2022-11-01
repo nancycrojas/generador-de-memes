@@ -4,22 +4,45 @@
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
+:root {
+    --colorFuente: #50FF00;
+    --modoOscuro: #020202;
+    --bgBotones: #30333F;
+    --textoModoOscuro: #FFF;
+}
+body {
+    background-image: url("assets/dark-mode.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+main {
+    color: var(--colorFuente);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .lightMode, .lightMode h1 {
-    /* background-color: #CFCFCF; */
     background-color: rgba(238,250,238,0.7);
-    color: black;
+    color: var(--modoOscuro);
 }
 .lightMode2 {
     background-color: #F2F2F2;
-    background-image: url("assets/light-mode.webp");
+    background-image: url("assets/light-mode.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .lightModeAside{
     background-color: rgba(235, 249, 235, 0.7);
-    color: black;
+    color: var(--modoOscuro);
 }
 header{
-    /* background-color: black; */
-    background-color: #020202;
+    background-color: var(--modoOscuro);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -27,8 +50,9 @@ header{
     align-items: center;
 }
 h1 {
-    color: white;
+    color: var(--textoModoOscuro);
     text-transform: uppercase;
+    text-align: center;
 }
 header .nav-buttons ul {
     display: flex;
@@ -36,17 +60,17 @@ header .nav-buttons ul {
     gap: 20px 
 }
 header .btn {
-    color: #50FF00;
+    color: var(--colorFuente);
     width: 120px;
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px; 
-    background-color: black;
+    background-color: var(--modoOscuro);
 }
 header .btn:hover {
     transform: scale(1.1);
-    background-color: #30343F;
+    background-color: var(--bgBotones);
     box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
     -webkit-box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
     -moz-box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
@@ -55,20 +79,6 @@ header .btn:hover {
     margin: 5px;
 }
 
-main {
-    
-    background-image: url("assets/dark-mode.webp");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  /*background-color: #30303F; */
-    color: #50FF00;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
 .canvas-meme {
     height: 450px;
     width: 650px;
@@ -82,32 +92,80 @@ main {
     height: 20%;
 }
 .canvas-meme .image-meme {
-    background-color: black;
+    background-color: var(--modoOscuro);
     height: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 .dowloand-button {
-    color: #50FF00;
+    color: var(--colorFuente);
     text-align: center;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
     margin: 25px; 
-    background-color: black;
+    background-color: var(--modoOscuro);
 }
 .dowloand-button:hover {
     transform: scale(1.1);
-    background-color: #30343F;
+    background-color:  var(--bgBotones);
     box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
     -webkit-box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
     -moz-box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
 }
+
+/*aside*/
+.close-image-panel {
+    font-size: 20px;
+    width: 20px;
+}
+.close-text-panel {
+    font-size: 20px;
+    width: 20px;
+} 
+.hidden {
+    display: none;
+}
+
+
+.panel-color {
+    display: flex;
+    justify-content: space-between;
+}
+.color {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    border: none;
+    background-color: gray;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.select {
+    width: 48%;
+    border: none;
+    background-color: gray;
+    padding: 8px;
+    border-radius: 5px; 
+    
+}
+.options {
+    width: 100%;
+    background-color: gray;
+    border: none;
+    outline: none;
+    color: var(--textoModoOscuro);
+}
+
 aside {
-/* background-color: rgba(153, 148, 148,0.8); */
 background-color: rgba(48, 48, 63, 0.8);
 width: 250px;
 min-height: 100vh;
-color: white;
+color: var(--textoModoOscuro);
 display: flex;
 align-self: flex-end;
 flex-direction: column;
@@ -116,3 +174,131 @@ top: 0;
 right: 0;
 }
 
+form h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+form{
+    margin: 0 10px;
+}
+.url {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.url input {
+    border: none;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+label {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.rango-color {
+    accent-color: #6ac041;
+}
+.filters{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+h3 {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.image-url {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+/*aside texto*/
+.higher, .lower {
+    display: flex;
+    flex-direction: column;
+}
+
+/* input {
+    border: none;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+} */
+
+/*estilo boton fondo*/
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+  }
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+
+.panel{
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+  
+/*Media queries*/
+@media (max-width:680px){
+    .canvas-meme {
+        height: 650px; 
+        width: 450px;
+        margin-top: 30px;
+    }
+    .canvas-meme .image-text {
+        padding-top: 20px;
+        height: 15%;
+    }
+    .canvas-meme .image-meme {
+        height: 70%;
+    }
+}
+
+@media (max-width:490px){
+    .canvas-meme {
+        height: 400px;
+        width: 320px;
+        margin-top: 20px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .canvas-meme .image-text {
+        font-size: 35px;
+        padding-top: 10px;
+    }
+    header .btn {
+        width: 100px;
+        font-size: 11px;
+    }
+    header .nav-buttons ul {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px 
+    }
+}
+
+@media (max-width:350px){
+    .canvas-meme {
+        height: 320px;
+        width: 260px;
+    }
+    .canvas-meme .image-text {
+        font-size: 30px;
+    }
+}
