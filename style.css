@@ -18,29 +18,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
-main {
-    color: var(--colorFuente);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.lightMode, .lightMode h1 {
-    background-color: rgba(238,250,238,0.7);
-    color: var(--modoOscuro);
-}
-.lightMode2 {
-    background-color: #F2F2F2;
-    background-image: url("assets/light-mode.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-.lightModeAside{
-    background-color: rgba(235, 249, 235, 0.7);
-    color: var(--modoOscuro);
-}
+/* Header */
 header{
     background-color: var(--modoOscuro);
     padding: 20px;
@@ -59,7 +37,7 @@ header .nav-buttons ul {
     list-style: none;
     gap: 20px 
 }
-header .btn {
+header .btn, header .btn-image, header .btn-text {
     color: var(--colorFuente);
     width: 120px;
     height: 30px;
@@ -78,7 +56,14 @@ header .btn:hover {
 .fa-solid {
     margin: 5px;
 }
-
+/* Main */
+main {
+    color: var(--colorFuente);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .canvas-meme {
     height: 450px;
     width: 650px;
@@ -98,8 +83,7 @@ header .btn:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.dowloand-button {
+.dowloand-button, .reseat-button {
     color: var(--colorFuente);
     text-align: center;
     width: 150px;
@@ -116,8 +100,7 @@ header .btn:hover {
     -webkit-box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
     -moz-box-shadow: 0px 4px 20px 4px rgba(255,255,255,0.75);
 }
-
-/*aside*/
+/* Aside */
 .close-image-panel {
     font-size: 20px;
     width: 20px;
@@ -129,13 +112,11 @@ header .btn:hover {
 .hidden {
     display: none;
 }
-
-
 .panel-color {
     display: flex;
     justify-content: space-between;
 }
-.color {
+.form-control {
     display: flex;
     align-items: center;
     width: 48%;
@@ -143,15 +124,22 @@ header .btn:hover {
     background-color: gray;
     padding: 8px;
     border-radius: 5px;
+    margin-top: 10px;
 }
-
+.form-control span {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.input-color span {
+    font-size: 14px;
+}
 .select {
     width: 48%;
     border: none;
     background-color: gray;
     padding: 8px;
     border-radius: 5px; 
-    
+    margin-top: 10px;
 }
 .options {
     width: 100%;
@@ -160,9 +148,8 @@ header .btn:hover {
     outline: none;
     color: var(--textoModoOscuro);
 }
-
 aside {
-background-color: rgba(48, 48, 63, 0.8);
+background-color: rgb(48, 48, 63, 0.8);
 width: 250px;
 min-height: 100vh;
 color: var(--textoModoOscuro);
@@ -173,33 +160,32 @@ position: fixed;
 top: 0;
 right: 0;
 }
-
 form h2 {
     text-align: center;
     font-size: 18px;
     margin-top: 10px;
 }
-
 form{
     margin: 0 10px;
 }
 .url {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
 }
 .url input {
     border: none;
     background-color: gray;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
-label {
+.form-label {
     font-size: 12px;
     font-weight: 500;
 }
 
-.rango-color {
+.form-input {
     accent-color: #6ac041;
 }
 .filters{
@@ -211,7 +197,10 @@ h3 {
     margin: 15px 0;
     font-size: 16px;
 }
-
+.form-label-fondo {
+    margin: 15px 0;
+    font-size: 16px;
+}
 .image-url {
     margin: 15px 0;
     font-size: 16px;
@@ -221,18 +210,82 @@ h3 {
 .higher, .lower {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+.form-input-text{
+    border: none;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+} 
+.form-check {
+    font-size: 13px;
 }
 
-/* input {
+.form-font {
+    display: flex;
+}
+.font{
+    margin: 20px 0;
+    width: 100%;
+    height: 30px;
+}
+.form-size {
     border: none;
     background-color: gray;
     padding: 10px;
     border-radius: 5px;
-} */
+    width: 45%;
+    outline: none;
+}
+.size-font {
+    display: flex;
+    gap: 20px;
+}
+.align-txt i {
+    font-size: 20px;
+}
+.cont-color {
+    display: flex;
+    gap: 13px;
+    margin: 10px 0 0;
+}
+.input-color {
+    background-color: gray;
+    border: none;
+    padding: 8px 19px 8px 8px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.outline, .spacing, .line-spacing {
+    margin: 10px 0;
+}
+.btn-contorno button {
+    border: none;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    width: 31%;
+    outline: none;
+    margin: 10px 0;
+}
+.form-spacing, .form-line-spacing {
+    border: none;
+    background-color: gray;
+    padding: 10px 60px 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+}
+
+
 
 /*estilo boton fondo*/
 input[type="color"] {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
+    /* appearance: none; */
     border: none;
     background-color: transparent;
     width: 15px;
@@ -245,13 +298,34 @@ input[type="color"] {
     border: none;
     border-radius: 50%;
   }
+  
 
 .panel{
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
+
+
+/* Modo claro / Modo oscuro */
+.lightMode, .lightMode h1 {
+    background-color: rgba(238,250,238,0.7);
+    color: var(--modoOscuro);
+}
+.lightMode2 {
+    background-color: #F2F2F2;
+    background-image: url("assets/light-mode.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.lightModeAside{
+    background-color: rgba(235, 249, 235, 0.7);
+    color: var(--modoOscuro);
+}
+
   
-/*Media queries*/
+/* Media queries */
 @media (max-width:680px){
     .canvas-meme {
         height: 650px; 
