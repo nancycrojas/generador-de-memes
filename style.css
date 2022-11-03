@@ -327,7 +327,7 @@ input[type="color"] {
 /* Media queries */
 @media (max-width:680px){
     .canvas-meme {
-        height: 650px; 
+        height: 600px; 
         width: 450px;
         margin-top: 30px;
     }
@@ -337,6 +337,9 @@ input[type="color"] {
     }
     .canvas-meme .image-meme {
         height: 70%;
+    }
+    .dowloand-button {
+        margin-top: 90px;
     }
 }
 @media (max-width:490px){
