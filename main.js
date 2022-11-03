@@ -21,6 +21,7 @@ const btnImage = $(".btn-image");
 const btnText = $(".btn-text");
 const contMeme = $(".image-meme");
 const inputColor = $("#input-color");
+const optionsBlend = $("#options-blend");
 const inputTopText = $("#input-top-text");
 const inputBottomText = $("#input-bottom-text");
 const noTopText = $("#no-top-text");
@@ -56,7 +57,7 @@ url.addEventListener("input", (event) => {
   imageMeme.style.backgroundImage = `url(${imageUrl})`;
 });
 
-//Cerrar abrir y alternar panel
+// Cerrar abrir y alternar panel
 closeImgPanel.addEventListener("click", ()=>{
   panelAsideImg.classList.add("hidden");
 }) 
@@ -80,6 +81,29 @@ inputColor.addEventListener("blur", (event) => {
   descargarImagen.style.backgroundColor = event.target.value
 });
 
+// Cambiar modo de mezcla de fondo
+optionsBlend.addEventListener("change", (event)=>{
+  console.log(event.target.value);
+  if(event.target.value == 'Ninguno'){
+    descargarImagen.style.backgroundBlendMode = 'unset'
+  }
+  if(event.target.value == 'Aclarar'){
+    descargarImagen.style.backgroundBlendMode = 'lighten'
+  }
+  if(event.target.value == 'Oscurecer'){
+    descargarImagen.style.backgroundBlendMode = 'darken'
+  }
+  if(event.target.value == 'Diferencia'){
+    descargarImagen.style.backgroundBlendMode = 'difference'
+  }
+  if(event.target.value == 'Luminosidad'){
+    descargarImagen.style.backgroundBlendMode = 'luminosity'
+  }
+  if(event.target.value == 'Multiplicar'){
+    descargarImagen.style.backgroundBlendMode = 'multiply'
+  }
+});
+
 // Editar texto superior
 inputTopText.addEventListener("input", (event)=>{
   imageTextTop.innerText = event.target.value;
@@ -89,8 +113,6 @@ inputTopText.addEventListener("input", (event)=>{
 inputBottomText.addEventListener("input", (event)=>{
   imageTextBottom.innerText = event.target.value;
 })
-
-
 
 // //Remover texto superior
 // noTopText.addEventListener("click", () => {
