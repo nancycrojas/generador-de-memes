@@ -165,9 +165,9 @@
                         <div class="size-font">
                             <input type="number" class="form-size" id="font-size" min="5" max="50" value="32">
                             <div class="align-txt">
-                                <button><i class="fa-solid fa-align-left"></i></button>
-                                <button><i class="fa-solid fa-align-center"></i></button>
-                                <button><i class="fa-solid fa-align-right"></i></button>
+                                <button id="btn-align" class="align-left"><i class="fa-solid fa-align-left"></i></button>
+                                <button id="btn-align" class="align-center"><i class="fa-solid fa-align-center"></i></button>
+                                <button id="btn-align" class="align-right"><i class="fa-solid fa-align-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -176,14 +176,14 @@
                             <div class="div-color">
                                 <label for="color" class="form-font">COLOR</label>
                                 <div class="input-color">
-                                    <input type="color">
+                                    <input type="color" id="input-color-letter">
                                     <span>#000000</span>
                                 </div>
                             </div>
                             <div class="div-fondo">
                                 <label for="color" class="form-font">FONDO</label>
                                 <div class="input-color">
-                                    <input type="color">
+                                    <input type="color" id="input-color-background">
                                     <span>#FFFFFF</span>
                                 </div>
                             </div>

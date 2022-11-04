@@ -27,6 +27,13 @@ const inputBottomText = $("#input-bottom-text");
 const noTopText = $("#no-top-text");
 const font = $("#font");
 const fontSize = $("#font-size");
+const alignLeft = $(".align-left");
+const alignCenter = $(".align-center");
+const alignRight = $(".align-right");
+const inputColorLetter = $("#input-color-letter");
+const inputColorBackground = $("#input-color-background");
+ 
+
 const inputBrillo = $("#input-brillo");
 const inputOpacidad = $("#input-opacidad");
 const inputContraste = $("#input-contraste");
@@ -238,6 +245,39 @@ fontSize.addEventListener("input",(event)=>{
 });
 
 //Cambiar alineación
+alignLeft.addEventListener("click",(event)=>{
+  console.log(event.target.value);
+  event.preventDefault();
+  imageTextTop.style.textAlign = 'left'
+  imageTextBottom.style.textAlign = 'left'
+})
+
+alignCenter.addEventListener("click",(event)=>{
+  console.log(event.target.value);
+  event.preventDefault();
+  imageTextTop.style.textAlign = 'center'
+  imageTextBottom.style.textAlign = 'center'
+})
+
+alignRight.addEventListener("click",(event)=>{
+  console.log(event.target.value);
+  event.preventDefault();
+  imageTextTop.style.textAlign = 'right'
+  imageTextBottom.style.textAlign = 'right'
+})
+
+// Cambiar color de texto
+inputColorLetter.addEventListener("input", (event) => {
+  imageTextTop.style.color = event.target.value
+  imageTextBottom.style.color = event.target.value
+});
+
+// Cambiar color de fondo de texto
+inputColorBackground.addEventListener("input", (event)=>{
+  console.log(event);
+  imageTextTop.style.backgroundColor = event.target.value
+  imageTextBottom.style.backgroundColor = event.target.value
+});
 
 // Funciones
 
