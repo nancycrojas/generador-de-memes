@@ -25,6 +25,8 @@ const optionsBlend = $("#options-blend");
 const inputTopText = $("#input-top-text");
 const inputBottomText = $("#input-bottom-text");
 const noTopText = $("#no-top-text");
+const font = $("#font");
+const fontSize = $("#font-size");
 const inputBrillo = $("#input-brillo");
 const inputOpacidad = $("#input-opacidad");
 const inputContraste = $("#input-contraste");
@@ -104,23 +106,6 @@ optionsBlend.addEventListener("change", (event)=>{
   }
 });
 
-// Editar texto superior
-inputTopText.addEventListener("input", (event)=>{
-  imageTextTop.innerText = event.target.value;
-})
-
-// Editar texto inferior
-inputBottomText.addEventListener("input", (event)=>{
-  imageTextBottom.innerText = event.target.value;
-})
-
-// //Remover texto superior
-// noTopText.addEventListener("click", () => {
-// console.log(noTopText);
-//   imageTextTop.classList.add("hidden");
-
-// });
-
 /*
 const actualizarFiltros = () => {
   let brightness = inputBrillo.value;
@@ -150,7 +135,6 @@ inputNegativo.addEventListener("change", actualizarFiltros)*/
 
 
 // Cambiar filtros
-
 inputBrillo.addEventListener("change", (event)=>{
   descargarImagen.style.filter = `brightness(${event.target.value})`;
 })
@@ -187,6 +171,73 @@ inputSaturado.addEventListener("change", (event)=>{
 inputNegativo.addEventListener("change", (event)=>{
   descargarImagen.style.filter = `invert(${event.target.value}%)`
 })
+
+// Editar texto superior
+inputTopText.addEventListener("input", (event)=>{
+  imageTextTop.innerText = event.target.value;
+})
+
+// Editar texto inferior
+inputBottomText.addEventListener("input", (event)=>{
+  imageTextBottom.innerText = event.target.value;
+})
+
+// //Remover texto superior
+// noTopText.addEventListener("click", () => {
+// console.log(noTopText);
+//   imageTextTop.classList.add("hidden");
+
+// });
+
+// Cambiar familia de fuente
+font.addEventListener("change",(event)=>{
+  console.log(event.target.value);
+  if(event.target.value == 'Arial'){
+    imageTextTop.style.fontFamily = 'Arial, Helvetica, sans-serif'
+    imageTextBottom.style.fontFamily = 'Arial, Helvetica, sans-serif'
+  }
+  if(event.target.value == 'Arial Black'){
+    imageTextTop.style.fontFamily = 'Arial Black'
+    imageTextBottom.style.fontFamily = 'Arial Black'
+  }
+  if(event.target.value == 'American Typewriter'){
+    imageTextTop.style.fontFamily = 'American Typewriter'
+    imageTextBottom.style.fontFamily = 'American Typewriter'
+  }
+  if(event.target.value == 'Andale Mono'){
+    imageTextTop.style.fontFamily = 'Andale Mono'
+    imageTextBottom.style.fontFamily = 'Andale Mono'
+  }
+  if(event.target.value == 'Comic Sans MS'){
+    imageTextTop.style.fontFamily = 'Comic Sans MS'
+    imageTextBottom.style.fontFamily = 'Comic Sans MS'
+  }
+  if(event.target.value == 'Helvetica'){
+    imageTextTop.style.fontFamily = 'Helvetica'
+    imageTextBottom.style.fontFamily = 'Helvetica'
+  }
+  if(event.target.value == 'Impact'){
+    imageTextTop.style.fontFamily = 'Impact'
+    imageTextBottom.style.fontFamily = 'Impact'
+  }
+  if(event.target.value == 'Verdana'){
+    imageTextTop.style.fontFamily = 'Verdana'
+    imageTextBottom.style.fontFamily = 'Verdana'
+  }
+  if(event.target.value == 'Times New Roman'){
+    imageTextTop.style.fontFamily = 'Times New Roman'
+    imageTextBottom.style.fontFamily = 'Times New Roman'
+  }
+});
+
+// Cambiar tamaño de fuente
+fontSize.addEventListener("input",(event)=>{
+  console.log(event.target.value);
+  imageTextTop.style.fontSize = `${event.target.value}px`
+  imageTextBottom.style.fontSize = `${event.target.value}px`
+});
+
+//Cambiar alineación
 
 // Funciones
 
