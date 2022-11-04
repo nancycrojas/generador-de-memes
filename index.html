@@ -4,7 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href=https://nancycrojas.github.io/generador-de-memes/>
     <link rel="shortcut icon" href="./assets/icon.jpg" type="image/x-icon">
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta
+      name="google-site-verification"
+      content=""
+    />
+    <meta
+      name="subject"
+      content="Proyecto desarrollado para el módulo 2 de Ada ITW"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <!-- Geo tags -->
+    <meta name="geo.region" content="AR" />
+    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="geo.position" content="-34.550688;-58.452607" />
+    <meta name="ICBM" content="-34.550688, -58.452607" />
+    <!-- Author tags -->
+    <link rel="me" href="mailto:nanclarisaok@gmail.com" />
+    <link rel="me" href="sms:+541164632224" />
+    <link rel="archives" href="https://github.com/nancycrojas" />
+    <!-- Social tags -->
+    <meta property="og:url" content="https://nancycrojas.github.io/generador-de-memes/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Generador de memes de Nancy Rojas" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/nancycrojas/generador-de-memes/master/assets/generador-de-memes.png" />
+    <meta
+    property="og:image"
+    name="twitter:image"
+    content="https://raw.githubusercontent.com/nancycrojas/generador-de-memes/master/assets/icon.jpg"
+    />
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/nancycrojas/generador-de-memes/master/assets/generador-de-memes.png" />
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/nancycrojas/generador-de-memes/master/assets/generador-de-memes.png" />
+    <meta
+      property="og:description"
+      name="twitter:description"
+      content="Generador de memes de Nancy Rojas"
+    />
+    <meta name="theme-color" content="#50FF00" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:image:alt" content="App" />
+    <meta
+      property="og:description"
+      content="Proyecto desarrollado para el módulo 2 de Ada ITW"
+    />
+    <meta
+      property="og:site_name"
+      content="Nancy Rojas | Generador de memes"
+    />
+    <meta property="og:locale" content="AR-S" />
+    <meta
+      property="article:author"
+      content="https://nancycrojas.github.io/generador-de-memes/"
+    />
     <link rel="stylesheet" href="style.css">
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,12 +84,12 @@
 <body id="body">
     <!--Comienzo del header-->
     <header id="header">
-        <h1 class="title">Generador de Memes</h1>
+        <h1 class="title" tabindex="1">Generador de Memes</h1>
         <nav class="nav-buttons">
             <ul>
-                <li><button class="btn btn-image"><i class="fa-solid fa-image"></i>Imagen</button></li>
-                <li><button class="btn btn-text"><i class="fa-solid fa-font"></i>Texto</button></li>
-                <li><button id="btn" class="btn"><i class="fa-solid fa-lightbulb"></i>Modo Claro</button></li>
+                <li><button class="btn btn-image" tabindex="2" aria-label="Boton para cargar tu imagen"><i class="fa-solid fa-image"></i>Imagen</button></li>
+                <li><button class="btn btn-text" tabindex="3" aria-label="Boton para editar el texto de tu imagen"><i class="fa-solid fa-font"></i>Texto</button></li>
+                <li><button id="btn" class="btn" tabindex="4"><i class="fa-solid fa-lightbulb"></i>Modo Claro</button></li>
             </ul>
         </nav>
     </header>
@@ -52,15 +106,15 @@
             </div>
             <p id="image-text-bottom" class="image-text">Bottom Text</p>
         </div>
-        <button class="dowloand-button" id="download-btn"><i class="fa-solid fa-download"></i>Descargar meme</button>
+        <button class="dowloand-button" id="download-btn" tabindex="5"><i class="fa-solid fa-download"></i>Descargar meme</button>
     <!-- Panel Imagen -->
         <aside class="panel-aside-img panel" id="aside">
-            <button class="close-image-panel">&times;</button>
+            <button class="close-image-panel" aria-hidden="true">&times;</button>
             <div class="image-aside-container">
                 <form action="">
                     <h2>IMAGEN</h2>
                     <div class="url">
-                        <label for="image-url" class="image-url">URL</label>
+                        <label for="image-url" class="image-url" tabindex="6" aria-label="Ingrese una url">URL</label>
                         <input type="url" id="image-url" name="image-url">
                     </div>
                     <div class="fondo">
@@ -68,7 +122,7 @@
                         <div class="panel-color">
                             <div class="form-control">
                                 <input type="color" id="input-color">
-                                <span>#FFFFFF</span>
+                                <span id="span-color">#FFFFFF</span>
                             </div>
                             <div class="select">
                                 <select name="options" class="options" id="options-blend">
@@ -129,7 +183,7 @@
         </aside>
     <!-- Panel Texto -->
         <aside class="panel-aside-txt panel" id="aside">
-            <button class="close-text-panel">&times;</button>
+            <button class="close-text-panel" aria-hidden="true">&times;</button>
             <div class="image-aside-container">
                 <form action="">
                     <h2>TEXTO</h2>
@@ -177,14 +231,14 @@
                                 <label for="color" class="form-font">COLOR</label>
                                 <div class="input-color">
                                     <input type="color" id="input-color-letter">
-                                    <span>#000000</span>
+                                    <span id="span-color-letter">#000000</span>
                                 </div>
                             </div>
                             <div class="div-fondo">
                                 <label for="color" class="form-font">FONDO</label>
                                 <div class="input-color">
                                     <input type="color" id="input-color-background">
-                                    <span>#FFFFFF</span>
+                                    <span id="span-color-bg">#FFFFFF</span>
                                 </div>
                             </div>
                         </div>
@@ -197,9 +251,9 @@
                     <div class="outline">
                         <label for="" class="form-font">CONTORNO</label>
                         <div class="btn-contorno">
-                            <button>Ninguno</button>
-                            <button>Claro</button>
-                            <button>Oscuro</button>
+                            <button id="btn-none">Ninguno</button>
+                            <button id="btn-light">Claro</button>
+                            <button id="btn-dark">Oscuro</button>
                         </div>
                     </div>
                     <div class="spacing">

@@ -114,6 +114,14 @@ main {
 .hidden {
     display: none;
 }
+.light-outline {
+    font-weight: 500;
+    text-shadow: 2px 2px 4px black;
+}
+.dark-outline {
+    font-weight: 700;
+    text-shadow: 6px 6px 6px black;
+}
 .panel-color {
     display: flex;
     justify-content: space-between;
@@ -131,9 +139,11 @@ main {
 .form-control span {
     font-size: 14px;
     margin-left: 10px;
+    text-transform: uppercase;
 }
 .input-color span {
     font-size: 14px;
+    text-transform: uppercase;
 }
 .select {
     width: 48%;

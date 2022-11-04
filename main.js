@@ -21,6 +21,7 @@ const btnImage = $(".btn-image");
 const btnText = $(".btn-text");
 const contMeme = $(".image-meme");
 const inputColor = $("#input-color");
+const spanColor = $("#span-color")
 const optionsBlend = $("#options-blend");
 const inputTopText = $("#input-top-text");
 const inputBottomText = $("#input-bottom-text");
@@ -31,8 +32,14 @@ const alignLeft = $(".align-left");
 const alignCenter = $(".align-center");
 const alignRight = $(".align-right");
 const inputColorLetter = $("#input-color-letter");
+const spanColorLetter = $("#span-color-letter")
 const inputColorBackground = $("#input-color-background");
- 
+const spanColorBg = $("#span-color-bg");
+
+const btnNone = $("#btn-none");
+const btnLight = $("#btn-light");
+const btnDark = $("#btn-dark");
+
 
 const inputBrillo = $("#input-brillo");
 const inputOpacidad = $("#input-opacidad");
@@ -88,6 +95,7 @@ btnText.addEventListener("click", () => {
 // Cambiar color de fondo de la imagen
 inputColor.addEventListener("blur", (event) => {
   descargarImagen.style.backgroundColor = event.target.value
+  spanColor.innerHTML = event.target.value;
 });
 
 // Cambiar modo de mezcla de fondo
@@ -267,16 +275,36 @@ alignRight.addEventListener("click",(event)=>{
 })
 
 // Cambiar color de texto
-inputColorLetter.addEventListener("input", (event) => {
+inputColorLetter.addEventListener("blur", (event) => {
   imageTextTop.style.color = event.target.value
   imageTextBottom.style.color = event.target.value
+  spanColorLetter.innerHTML = event.target.value;
 });
 
 // Cambiar color de fondo de texto
-inputColorBackground.addEventListener("input", (event)=>{
+inputColorBackground.addEventListener("blur", (event)=>{
   console.log(event);
   imageTextTop.style.backgroundColor = event.target.value
   imageTextBottom.style.backgroundColor = event.target.value
+  spanColorBg.innerHTML = event.target.value;
+});
+
+// Cambiar padding de texto
+btnLight.addEventListener("click", (event) => {
+  event.preventDefault();
+  imageTextTop.classList.add("light-outline");
+  imageTextBottom.classList.add("light-outline");
+  imageTextTop.classList.remove("dark-outline");
+  imageTextBottom.classList.remove("dark-outline");
+
+});
+btnDark.addEventListener("click", (event) => {
+  event.preventDefault();
+  imageTextTop.classList.add("dark-outline");
+  imageTextBottom.classList.add("dark-outline");
+  imageTextTop.classList.remove("light-outline");
+  imageTextBottom.classList.remove("light-outline");
+  
 });
 
 // Funciones
