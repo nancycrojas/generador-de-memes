@@ -107,20 +107,23 @@ main {
     font-size: 20px;
     font-weight: bold;
     width: 20px;
-    background-color: #50FF00;
+    background-color: var(--colorFuente);
     border-radius: 30%;
     border: none;
 }
 .hidden {
     display: none;
 }
+.none-outline {
+    outline: none;
+}
 .light-outline {
     font-weight: 500;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px var(--modoOscuro);
 }
 .dark-outline {
     font-weight: 700;
-    text-shadow: 6px 6px 6px black;
+    text-shadow: 6px 6px 6px var(--modoOscuro);
 }
 .panel-color {
     display: flex;
@@ -275,10 +278,11 @@ form{
 .form-spacing, .form-line-spacing {
     border: none;
     background-color: gray;
-    padding: 10px 60px 10px 10px;
+    padding: 10px;
     border-radius: 5px;
     outline: none;
     margin: 10px 0;
+    width: 100%;
 }
 /* Estilo input redondo*/
 input[type="color"] {

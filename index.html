@@ -99,10 +99,6 @@
         <div class="canvas-meme">
             <p id="image-text-top" class="image-text">Top Text</p>
             <div class="image-meme" id="img-descargar">
-                <!-- <img src="" 
-                alt=""
-                class="img"
-                > -->
             </div>
             <p id="image-text-bottom" class="image-text">Bottom Text</p>
         </div>
@@ -217,7 +213,7 @@
                             <option value="Times New Roman">Times New Roman</option>
                         </select>
                         <div class="size-font">
-                            <input type="number" class="form-size" id="font-size" min="5" max="50" value="32">
+                            <input type="number" class="form-size" id="font-size" min="5" value="32">
                             <div class="align-txt">
                                 <button id="btn-align" class="align-left"><i class="fa-solid fa-align-left"></i></button>
                                 <button id="btn-align" class="align-center"><i class="fa-solid fa-align-center"></i></button>
@@ -243,8 +239,8 @@
                             </div>
                         </div>
                         <div>
-                            <input type="checkbox" id="checkbox">
-                            <label for="checkbox" class="form-check">Fondo transparente</label>
+                            <input type="checkbox" id="checkbox-background">
+                            <label for="checkbox-background" class="form-check">Fondo transparente</label>
                         </div>
                     </div>
                     
@@ -258,11 +254,18 @@
                     </div>
                     <div class="spacing">
                         <label for="form-spacing" class="form-font">ESPACIADO</label>
-                        <input type="number" class="form-spacing" id="form-spacing">
+                        <input type="number" class="form-spacing" id="form-spacing" min="10" max="50" value="35">
                     </div>
                     <div class="line-spacing">
                         <label for="form-line-spacing" class="form-font">INTERLINEADO</label>
-                        <input type="number" class="form-line-spacing" id="form-line-spacing">
+                        <select id="form-line-spacing" class="form-line-spacing">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2" selected>1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                        </select>
                     </div>
                 </form>
             </div>   

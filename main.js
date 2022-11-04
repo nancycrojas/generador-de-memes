@@ -36,11 +36,13 @@ const spanColorLetter = $("#span-color-letter")
 const inputColorBackground = $("#input-color-background");
 const spanColorBg = $("#span-color-bg");
 
+const checkboxBackground = $("#checkbox-background");
+
 const btnNone = $("#btn-none");
 const btnLight = $("#btn-light");
 const btnDark = $("#btn-dark");
-
-
+const spacing = $("#form-spacing");
+const formLineSpacing = $("#form-line-spacing");
 const inputBrillo = $("#input-brillo");
 const inputOpacidad = $("#input-opacidad");
 const inputContraste = $("#input-contraste");
@@ -136,7 +138,6 @@ const actualizarFiltros = () => {
   imageMeme.style.filter = `brightness(${brightness}) opacity(${opacity}%) contrast(${contrast}%) blur(${blur}px) grayscale(${grayscale}%) sepia(${sepia}%) hue(${hue}deg) saturate(${saturate}%) invert(${invert}%)`;
 
 };
-
 
 inputBrillo.addEventListener("change", actualizarFiltros)
 inputOpacidad.addEventListener("change", actualizarFiltros)
@@ -289,23 +290,82 @@ inputColorBackground.addEventListener("blur", (event)=>{
   spanColorBg.innerHTML = event.target.value;
 });
 
-// Cambiar padding de texto
-btnLight.addEventListener("click", (event) => {
+// Fondo transparente
+checkboxBackground.addEventListener("change", (event)=>{
+  console.log(event);
+  if(checkboxBackground.checked){
+    imageTextTop.style.backgroundColor = 'transparent';
+    imageTextBottom.style.backgroundColor = 'transparent';
+    // canvasMeme.style.backgroundImage = `url(${imageUrl})`;
+  }
+  else{
+    imageTextTop.style.backgroundColor = inputColorBackground.value;
+    imageTextBottom.style.backgroundColor = inputColorBackground.value;
+  }
+})
+
+// Cambiar contorno de texto
+btnLight.addEventListener("click", (event) =>{
   event.preventDefault();
   imageTextTop.classList.add("light-outline");
   imageTextBottom.classList.add("light-outline");
   imageTextTop.classList.remove("dark-outline");
   imageTextBottom.classList.remove("dark-outline");
-
 });
-btnDark.addEventListener("click", (event) => {
+
+btnDark.addEventListener("click", (event) =>{
   event.preventDefault();
   imageTextTop.classList.add("dark-outline");
   imageTextBottom.classList.add("dark-outline");
   imageTextTop.classList.remove("light-outline");
   imageTextBottom.classList.remove("light-outline");
-  
 });
+
+btnNone.addEventListener("click", (event) =>{
+  event.preventDefault();
+  imageTextTop.classList.add("none-outline");
+  imageTextBottom.classList.add("none-outline");
+  imageTextTop.classList.remove("light-outline");
+  imageTextBottom.classList.remove("light-outline");
+  imageTextTop.classList.remove("dark-outline");
+  imageTextBottom.classList.remove("dark-outline");
+});
+
+// Cambiar contorno de texto
+spacing.addEventListener("input",(event)=>{
+  console.log(event.target.value);
+  imageTextTop.style.padding = `${event.target.value}px`
+  imageTextBottom.style.padding = `${event.target.value}px`
+});
+
+// Cambiar alto de línea de texto
+formLineSpacing.addEventListener("input",(event)=>{
+  console.log(event.target.value);
+  if(event.target.value == '0.8'){
+    imageTextTop.style.lineHeight = '0.8'
+    imageTextBottom.style.lineHeight = '0.8'
+  }
+  if(event.target.value == '1'){
+    imageTextTop.style.lineHeight = '1'
+    imageTextBottom.style.lineHeight = '1'
+  }
+  if(event.target.value == '1.2'){
+    imageTextTop.style.lineHeight = '1.2'
+    imageTextBottom.style.lineHeight = '1.2'
+  }
+  if(event.target.value == '1.5'){
+    imageTextTop.style.lineHeight = '1.5'
+    imageTextBottom.style.lineHeight = '1.5'
+  }
+  if(event.target.value == '2'){
+    imageTextTop.style.lineHeight = '2'
+    imageTextBottom.style.lineHeight = '2'
+  }
+  if(event.target.value == '2.5'){
+    imageTextTop.style.lineHeight = '2.5'
+    imageTextBottom.style.lineHeight = '2.5'
+  }
+}); 
 
 // Funciones
 
