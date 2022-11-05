@@ -5,20 +5,14 @@ const $ = (selector) => document.querySelector(selector);
 const header = $("#header");
 const body = $("#body");
 const aside = $("#aside");
-const btn = $("#btn");
 const url =$("#image-url");
-let imageMeme = $(".image-meme");
+const imageMeme = $(".image-meme");
 const imageTextTop = $("#image-text-top");
 const imageTextBottom = $("#image-text-bottom");
-let descargarImagen = document.getElementById("img-descargar");
+const descargarImagen = $("#img-descargar");
 const canvasMeme = $(".canvas-meme");
-const downloadBtn = document.getElementById("download-btn");
-const closeImgPanel = $(".close-image-panel");
-const closeTextPanel = $(".close-text-panel");
 const panelAsideImg = $(".panel-aside-img");
 const panelAsideTxt = $(".panel-aside-txt");
-const btnImage = $(".btn-image");
-const btnText = $(".btn-text");
 const contMeme = $(".image-meme");
 const inputColor = $("#input-color");
 const spanColor = $("#span-color")
@@ -26,21 +20,14 @@ const optionsBlend = $("#options-blend");
 const inputTopText = $("#input-top-text");
 const inputBottomText = $("#input-bottom-text");
 const noTopText = $("#no-top-text");
+const noBottomText = $("#no-bottom-text")
 const font = $("#font");
 const fontSize = $("#font-size");
-const alignLeft = $(".align-left");
-const alignCenter = $(".align-center");
-const alignRight = $(".align-right");
 const inputColorLetter = $("#input-color-letter");
 const spanColorLetter = $("#span-color-letter")
 const inputColorBackground = $("#input-color-background");
 const spanColorBg = $("#span-color-bg");
-
 const checkboxBackground = $("#checkbox-background");
-
-const btnNone = $("#btn-none");
-const btnLight = $("#btn-light");
-const btnDark = $("#btn-dark");
 const spacing = $("#form-spacing");
 const formLineSpacing = $("#form-line-spacing");
 const inputBrillo = $("#input-brillo");
@@ -52,7 +39,21 @@ const inputSepia = $("#input-sepia");
 const inputHue = $("#input-hue");
 const inputSaturado = $("#input-saturate");
 const inputNegativo = $("#input-invert");
+
+// Botones
+const btn = $("#btn");
+const btnImage = $(".btn-image");
+const btnText = $(".btn-text");
+const downloadBtn = $("#download-btn");
+const closeImgPanel = $(".close-image-panel");
 const btnReseat = $(".reseat-filters");
+const closeTextPanel = $(".close-text-panel");
+const btnNone = $("#btn-none");
+const btnLight = $("#btn-light");
+const btnDark = $("#btn-dark");
+const alignLeft = $(".align-left");
+const alignCenter = $(".align-center");
+const alignRight = $(".align-right");
 
 //Eventos
 
@@ -198,12 +199,17 @@ inputBottomText.addEventListener("input", (event)=>{
   imageTextBottom.innerText = event.target.value;
 })
 
-// //Remover texto superior
-// noTopText.addEventListener("click", () => {
-// console.log(noTopText);
-//   imageTextTop.classList.add("hidden");
+// Remover texto superior
+noTopText.addEventListener("click", (event) => {
+ console.log(event);
+ imageTextTop.classList.toggle("hidden");
+});
 
-// });
+// Remover texto inferior
+noBottomText.addEventListener("click", (event) => {
+  console.log(event);
+  imageTextBottom.classList.toggle("hidden");
+ });
 
 // Cambiar familia de fuente
 font.addEventListener("change",(event)=>{

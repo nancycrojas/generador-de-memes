@@ -9,8 +9,8 @@
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
     <meta
-      name="google-site-verification"
-      content=""
+    name="google-site-verification" 
+    content="f2V4p5WPkQ-RSdRypNbMOCe9HwEiQl2oKS37mUhsNaA"
     />
     <meta
       name="subject"
@@ -89,20 +89,20 @@
             <ul>
                 <li><button class="btn btn-image" tabindex="2" aria-label="Boton para cargar tu imagen"><i class="fa-solid fa-image"></i>Imagen</button></li>
                 <li><button class="btn btn-text" tabindex="3" aria-label="Boton para editar el texto de tu imagen"><i class="fa-solid fa-font"></i>Texto</button></li>
-                <li><button id="btn" class="btn" tabindex="4"><i class="fa-solid fa-lightbulb"></i>Modo Claro</button></li>
+                <li><button id="btn" class="btn" tabindex="4" aria-label="Cambiar a modo claro"><i class="fa-solid fa-lightbulb"></i>Modo Claro</button></li>
             </ul>
         </nav>
     </header>
     <!--Fin del header-->
     <!--Comienzo del main-->
     <main class="container-meme" id="container">
-        <div class="canvas-meme">
-            <p id="image-text-top" class="image-text">Top Text</p>
-            <div class="image-meme" id="img-descargar">
+        <div class="canvas-meme" tabindex="5" aria-label="Contenedor meme">
+            <p id="image-text-top" class="image-text" tabindex="6" aria-label="Texto superior">Top Text</p>
+            <div class="image-meme" id="img-descargar" tabindex="7" aria-label="Imagen">
             </div>
-            <p id="image-text-bottom" class="image-text">Bottom Text</p>
+            <p id="image-text-bottom" class="image-text" tabindex="8" aria-label="Texto inferior">Bottom Text</p>
         </div>
-        <button class="dowloand-button" id="download-btn" tabindex="5"><i class="fa-solid fa-download"></i>Descargar meme</button>
+        <button class="dowloand-button" id="download-btn" tabindex="9" aria-label="Descargar imagen"><i class="fa-solid fa-download"></i>Descargar meme</button>
     <!-- Panel Imagen -->
         <aside class="panel-aside-img panel" id="aside">
             <button class="close-image-panel" aria-hidden="true">&times;</button>
@@ -110,18 +110,18 @@
                 <form action="">
                     <h2>IMAGEN</h2>
                     <div class="url">
-                        <label for="image-url" class="image-url" tabindex="6" aria-label="Ingrese una url">URL</label>
-                        <input type="url" id="image-url" name="image-url">
+                        <label for="image-url" class="image-url">URL</label>
+                        <input type="url" id="image-url" name="image-url" tabindex="10" aria-label="Ingrese una url">
                     </div>
                     <div class="fondo">
                         <label for="input-color" class="form-label-fondo">FONDO</label>
                         <div class="panel-color">
                             <div class="form-control">
-                                <input type="color" id="input-color">
-                                <span id="span-color">#FFFFFF</span>
+                                <input type="color" id="input-color" tabindex="11" aria-label="Cambiar el color de fondo">
+                                <span id="span-color" aria-hidden="true">#FFFFFF</span>
                             </div>
                             <div class="select">
-                                <select name="options" class="options" id="options-blend">
+                                <select name="options" class="options" id="options-blend" tabindex="12" aria-label="Cambiar el modo mezcla">
                                     <option value="Ninguno">Ninguno</option>
                                     <option value="Aclarar">Aclarar</option>
                                     <option value="Oscurecer">Oscurecer</option>
@@ -131,10 +131,9 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
-                    
+                    </div> 
                     <div>
-                        <h3>FILTROS</h3>
+                        <h3 tabindex="13" aria-label="Cambiar los filtros">FILTROS</h3>
                         <div class="filters">
                             <label for="input-brillo" class="form-label">BRILLO</label>
                             <input type="range" id="input-brillo" class="form-input" min="0" max="1" step="0.1" value="1">
@@ -173,7 +172,7 @@
                             <input type="range" id="input-invert" class="form-input" min="0" max="100" value="0" step="0.1">
                         </div>
                     </div>
-                    <button class="reseat-filters">Reestablecer filtros</button>
+                    <button class="reseat-filters" tabindex="14" aria-label="Reestablecer los filtros">Reestablecer filtros</button>
                 </form>
             </div>   
         </aside>
@@ -185,7 +184,7 @@
                     <h2>TEXTO</h2>
                     <div class="higher">
                         <label for="input-top-text" class="form-label-text">SUPERIOR</label>
-                        <textarea class="form-input-text" id="input-top-text">TOP TEXT</textarea>
+                        <textarea class="form-input-text" id="input-top-text" tabindex="15" aria-label="Editar el texto superior">TOP TEXT</textarea>
                         <div>
                             <input type="checkbox" id="no-top-text">
                             <label for="no-top-text" class="form-check">Sin texto superior</label>
@@ -193,15 +192,15 @@
                     </div>
                     <div class="lower">
                         <label for="input-bottom-text" class="form-label-text">INFERIOR</label>
-                        <textarea class="form-input-text" id="input-bottom-text">BOTTOM TEXT</textarea>
+                        <textarea class="form-input-text" id="input-bottom-text" tabindex="16" aria-label="Editar el texto inferior">BOTTOM TEXT</textarea>
                         <div>
-                            <input type="checkbox" id="checkbox">
-                            <label for="checkbox" class="form-check">Sin texto inferior</label>
+                            <input type="checkbox" id="no-bottom-text">
+                            <label for="no-bottom-text" class="form-check">Sin texto inferior</label>
                         </div>
                     </div>
-                    <div class="">
+                    <div>
                         <label for="font" class="form-font">FUENTE</label>
-                        <select name="font" id="font" class="font">
+                        <select name="font" id="font" class="font" tabindex="17" aria-label="Cambiar la fuente del texto">
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
@@ -213,11 +212,11 @@
                             <option value="Times New Roman">Times New Roman</option>
                         </select>
                         <div class="size-font">
-                            <input type="number" class="form-size" id="font-size" min="5" value="32">
+                            <input type="number" class="form-size" id="font-size" min="5" value="32" tabindex="18" aria-label="Cambiar el tamaño de la fuente">
                             <div class="align-txt">
-                                <button id="btn-align" class="align-left"><i class="fa-solid fa-align-left"></i></button>
-                                <button id="btn-align" class="align-center"><i class="fa-solid fa-align-center"></i></button>
-                                <button id="btn-align" class="align-right"><i class="fa-solid fa-align-right"></i></button>
+                                <button id="btn-align" class="align-left" tabindex="19" aria-label="Alinear a la izquierda"><i class="fa-solid fa-align-left"></i></button>
+                                <button id="btn-align" class="align-center" tabindex="20" aria-label="Alinear al centro"><i class="fa-solid fa-align-center"></i></button>
+                                <button id="btn-align" class="align-right" tabindex="21" aria-label="Alinear a la derecha"><i class="fa-solid fa-align-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -225,16 +224,16 @@
                         <div class="cont-color">
                             <div class="div-color">
                                 <label for="color" class="form-font">COLOR</label>
-                                <div class="input-color">
+                                <div class="input-color" tabindex="22" aria-label="Cambiar el color de la fuente">
                                     <input type="color" id="input-color-letter">
-                                    <span id="span-color-letter">#000000</span>
+                                    <span id="span-color-letter" aria-hidden="true">#000000</span>
                                 </div>
                             </div>
                             <div class="div-fondo">
                                 <label for="color" class="form-font">FONDO</label>
-                                <div class="input-color">
+                                <div class="input-color" tabindex="23" aria-label="Cambiar el fondo del texto">
                                     <input type="color" id="input-color-background">
-                                    <span id="span-color-bg">#FFFFFF</span>
+                                    <span id="span-color-bg" aria-hidden="true">#FFFFFF</span>
                                 </div>
                             </div>
                         </div>
@@ -243,9 +242,8 @@
                             <label for="checkbox-background" class="form-check">Fondo transparente</label>
                         </div>
                     </div>
-                    
                     <div class="outline">
-                        <label for="" class="form-font">CONTORNO</label>
+                        <h3 class="form-font" tabindex="24" aria-label="Cambiar el contorno del texto">CONTORNO</h3>
                         <div class="btn-contorno">
                             <button id="btn-none">Ninguno</button>
                             <button id="btn-light">Claro</button>
@@ -254,11 +252,11 @@
                     </div>
                     <div class="spacing">
                         <label for="form-spacing" class="form-font">ESPACIADO</label>
-                        <input type="number" class="form-spacing" id="form-spacing" min="10" max="50" value="35">
+                        <input type="number" class="form-spacing" id="form-spacing" min="10" max="50" value="35" tabindex="25" aria-label="Cambiar el espaciado del texto">
                     </div>
                     <div class="line-spacing">
                         <label for="form-line-spacing" class="form-font">INTERLINEADO</label>
-                        <select id="form-line-spacing" class="form-line-spacing">
+                        <select id="form-line-spacing" class="form-line-spacing" tabindex="26" aria-label="Cambiar el interlineado del texto">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2" selected>1.2</option>
