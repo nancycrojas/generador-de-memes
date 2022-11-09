@@ -97,10 +97,10 @@
     <!--Comienzo del main-->
     <main class="container-meme" id="container">
         <div class="canvas-meme" tabindex="5" aria-label="Contenedor meme">
-            <p id="image-text-top" class="image-text" tabindex="6" aria-label="Texto superior">Top Text</p>
             <div class="image-meme" id="img-descargar" tabindex="7" aria-label="Imagen">
+                <p id="image-text-top" class="image-text" tabindex="6" aria-label="Texto superior">Top Text</p>
+                <p id="image-text-bottom" class="image-text" tabindex="8" aria-label="Texto inferior">Bottom Text</p>
             </div>
-            <p id="image-text-bottom" class="image-text" tabindex="8" aria-label="Texto inferior">Bottom Text</p>
         </div>
         <button class="dowloand-button" id="download-btn" tabindex="9" aria-label="Descargar imagen"><i class="fa-solid fa-download"></i>Descargar meme</button>
     <!-- Panel Imagen -->
@@ -143,7 +143,7 @@
                             <input type="range" id="input-opacidad" class="form-input" value="100">
                         </div>
                         <div class="filters">
-                            <label for=" input-contraste" class="form-label">CONTRASTE</label>
+                            <label for="input-contraste" class="form-label">CONTRASTE</label>
                             <input type="range" id="input-contraste" class="form-input" min="100" max="1000" step="100" value="100">
                         </div>
                         <div class="filters">
@@ -184,7 +184,7 @@
                     <h2>TEXTO</h2>
                     <div class="higher">
                         <label for="input-top-text" class="form-label-text">SUPERIOR</label>
-                        <textarea class="form-input-text" id="input-top-text" tabindex="15" aria-label="Editar el texto superior">TOP TEXT</textarea>
+                        <textarea class="form-input-text" id="input-top-text" maxlength="48" tabindex="15" aria-label="Editar el texto superior">TOP TEXT</textarea>
                         <div>
                             <input type="checkbox" id="no-top-text">
                             <label for="no-top-text" class="form-check">Sin texto superior</label>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="lower">
                         <label for="input-bottom-text" class="form-label-text">INFERIOR</label>
-                        <textarea class="form-input-text" id="input-bottom-text" tabindex="16" aria-label="Editar el texto inferior">BOTTOM TEXT</textarea>
+                        <textarea class="form-input-text" id="input-bottom-text" maxlength="48" tabindex="16" aria-label="Editar el texto inferior">BOTTOM TEXT</textarea>
                         <div>
                             <input type="checkbox" id="no-bottom-text">
                             <label for="no-bottom-text" class="form-check">Sin texto inferior</label>

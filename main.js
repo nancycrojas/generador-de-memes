@@ -5,7 +5,7 @@ const $ = (selector) => document.querySelector(selector);
 const header = $("#header");
 const body = $("#body");
 const aside = $("#aside");
-const url =$("#image-url");
+const url = $("#image-url");
 const imageMeme = $(".image-meme");
 const imageTextTop = $("#image-text-top");
 const imageTextBottom = $("#image-text-bottom");

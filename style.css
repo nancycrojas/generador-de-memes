@@ -78,13 +78,28 @@ main {
     padding-top: 15px;
     background-color: rgb(153, 148, 148);
     min-height: 20%;
+    word-break: break-all;
+}
+#image-text-top{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#image-text-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .canvas-meme .image-meme {
     /* background-color: var(--modoOscuro); */
-    height: 60%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 }
 .dowloand-button{
     color: var(--colorFuente);
