@@ -104,7 +104,7 @@
         </div>
         <button class="dowloand-button" id="download-btn" tabindex="9" aria-label="Descargar imagen"><i class="fa-solid fa-download"></i>Descargar meme</button>
     <!-- Panel Imagen -->
-        <aside class="panel-aside-img panel" id="aside">
+        <aside id="panel-aside-img" class="aside panel">
             <button class="close-image-panel" aria-hidden="true">&times;</button>
             <div class="image-aside-container">
                 <form action="">
@@ -154,7 +154,6 @@
                             <label for="input-grayscale" class="form-label">ESCALA DE GRISES</label>
                             <input type="range" id="input-grayscale" class="form-input" min="0" max="100" value="0">
                         </div>
-                        </div>
                         <div class="filters">
                             <label for="input-sepia" class="form-label">SEPIA</label>
                             <input type="range" id="input-sepia" class="form-input" min="0" max="100" value="0">
@@ -164,7 +163,7 @@
                             <input type="range" id="input-hue" class="form-input" min="0" max="359 " value="0">
                         </div>
                         <div class="filters">
-                            <label for=input-saturate" class="form-label">SATURADO</label>
+                            <label for="input-saturate" class="form-label">SATURADO</label>
                             <input type="range" id="input-saturate" class="form-input" min="100" max="1000" value="100" step="10">
                         </div>
                         <div class="filters">
@@ -177,7 +176,7 @@
             </div>   
         </aside>
     <!-- Panel Texto -->
-        <aside class="panel-aside-txt panel" id="aside">
+        <aside id="panel-aside-txt" class="aside panel">
             <button class="close-text-panel" aria-hidden="true">&times;</button>
             <div class="image-aside-container">
                 <form action="">
@@ -214,9 +213,9 @@
                         <div class="size-font">
                             <input type="number" class="form-size" id="font-size" min="5" value="32" tabindex="18" aria-label="Cambiar el tamaño de la fuente">
                             <div class="align-txt">
-                                <button id="btn-align" class="align-left" tabindex="19" aria-label="Alinear a la izquierda"><i class="fa-solid fa-align-left"></i></button>
-                                <button id="btn-align" class="align-center" tabindex="20" aria-label="Alinear al centro"><i class="fa-solid fa-align-center"></i></button>
-                                <button id="btn-align" class="align-right" tabindex="21" aria-label="Alinear a la derecha"><i class="fa-solid fa-align-right"></i></button>
+                                <button class="align-left" tabindex="19" aria-label="Alinear a la izquierda"><i class="fa-solid fa-align-left"></i></button>
+                                <button class="align-center" tabindex="20" aria-label="Alinear al centro"><i class="fa-solid fa-align-center"></i></button>
+                                <button class="align-right" tabindex="21" aria-label="Alinear a la derecha"><i class="fa-solid fa-align-right"></i></button>
                             </div>
                         </div>
                     </div>

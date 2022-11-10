@@ -4,15 +4,15 @@ const $ = (selector) => document.querySelector(selector);
 // Variables
 const header = $("#header");
 const body = $("#body");
-const aside = $("#aside");
+const aside = $(".aside");
 const url = $("#image-url");
 const imageMeme = $(".image-meme");
 const imageTextTop = $("#image-text-top");
 const imageTextBottom = $("#image-text-bottom");
 const descargarImagen = $("#img-descargar");
 const canvasMeme = $(".canvas-meme");
-const panelAsideImg = $(".panel-aside-img");
-const panelAsideTxt = $(".panel-aside-txt");
+const panelAsideImg = $("#panel-aside-img");
+const panelAsideTxt = $("#panel-aside-txt");
 const contMeme = $(".image-meme");
 const inputColor = $("#input-color");
 const spanColor = $("#span-color")
@@ -123,33 +123,6 @@ optionsBlend.addEventListener("change", (event)=>{
     descargarImagen.style.backgroundBlendMode = 'multiply'
   }
 });
-
-/*
-const actualizarFiltros = () => {
-  let brightness = inputBrillo.value;
-  let opacity = inputOpacidad.value;
-  let contrast = input.inputContraste;
-  let blur = inputDesenfoque.value;
-  let grayscale = inputEscalaDeGrises.value;
-  let sepia = inputSepia.value;
-  let hue = inputHue.value;
-  let saturate = inputSaturado.value;
-  let invert = inputNegativo.value;
-
-  imageMeme.style.filter = `brightness(${brightness}) opacity(${opacity}%) contrast(${contrast}%) blur(${blur}px) grayscale(${grayscale}%) sepia(${sepia}%) hue(${hue}deg) saturate(${saturate}%) invert(${invert}%)`;
-
-};
-
-inputBrillo.addEventListener("change", actualizarFiltros)
-inputOpacidad.addEventListener("change", actualizarFiltros)
-inputContraste.addEventListener("change", actualizarFiltros)
-inputDesenfoque.addEventListener("change", actualizarFiltros)
-inputEscalaDeGrises.addEventListener("change", actualizarFiltros)
-inputSepia.addEventListener("change", actualizarFiltros)
-inputHue.addEventListener("change", actualizarFiltros)
-inputSaturado.addEventListener("change", actualizarFiltros)
-inputNegativo.addEventListener("change", actualizarFiltros)*/
-
 
 // Cambiar filtros
 inputBrillo.addEventListener("change", (event)=>{
@@ -302,7 +275,6 @@ checkboxBackground.addEventListener("change", (event)=>{
   if(checkboxBackground.checked){
     imageTextTop.style.backgroundColor = 'transparent';
     imageTextBottom.style.backgroundColor = 'transparent';
-    // canvasMeme.style.backgroundImage = `url(${imageUrl})`;
   }
   else{
     imageTextTop.style.backgroundColor = inputColorBackground.value;
@@ -337,7 +309,7 @@ btnNone.addEventListener("click", (event) =>{
   imageTextBottom.classList.remove("dark-outline");
 });
 
-// Cambiar contorno de texto
+// Cambiar padding de texto
 spacing.addEventListener("input",(event)=>{
   console.log(event.target.value);
   imageTextTop.style.padding = `${event.target.value}px`
@@ -394,7 +366,6 @@ const resetearFiltros = () => {
   inputHue.value = 0;
   inputSaturado.value = 100;
   inputNegativo.value = 0;
-
 };
 
 btnReseat.addEventListener("click", resetearFiltros);

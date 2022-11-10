@@ -9,6 +9,7 @@
     --modoOscuro: #020202;
     --bgBotones: #30333F;
     --textoModoOscuro: #FFF;
+    --botonesAside: #808080;
 }
 body {
     background-image: url("assets/dark-mode.jpg");
@@ -91,7 +92,6 @@ main {
     width: 100%;
 }
 .canvas-meme .image-meme {
-    /* background-color: var(--modoOscuro); */
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ main {
     align-items: center;
     width: 48%;
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 8px;
     border-radius: 5px;
     margin-top: 10px;
@@ -168,14 +168,14 @@ main {
 .select {
     width: 48%;
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 8px;
     border-radius: 5px; 
     margin-top: 10px;
 }
 .options {
     width: 100%;
-    background-color: gray;
+    background-color: var(--botonesAside);
     border: none;
     outline: none;
     color: var(--textoModoOscuro);
@@ -206,7 +206,7 @@ form{
 }
 .url input {
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -237,7 +237,7 @@ form{
 }
 .form-input-text{
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 3px;
     border-radius: 5px;
     outline: none;
@@ -255,7 +255,7 @@ form{
 }
 .form-size {
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 5px;
     border-radius: 5px;
     width: 45%;
@@ -274,7 +274,7 @@ form{
     margin: 10px 0 0;
 }
 .input-color {
-    background-color: gray;
+    background-color: var(--botonesAside);
     border: none;
     padding: 8px 19px 8px 8px;
     border-radius: 5px;
@@ -285,7 +285,7 @@ form{
 }
 .btn-contorno button {
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 10px;
     border-radius: 5px;
     width: 31%;
@@ -294,7 +294,7 @@ form{
 }
 .form-spacing, .form-line-spacing {
     border: none;
-    background-color: gray;
+    background-color: var(--botonesAside);
     padding: 10px;
     border-radius: 5px;
     outline: none;
@@ -366,12 +366,6 @@ input[type="color"] {
     .canvas-meme .image-text {
         padding-top: 20px;
         height: 15%;
-    }
-    .canvas-meme .image-meme {
-        height: 70%;
-    }
-    .dowloand-button {
-        margin-top: 90px;
     }
 }
 @media (max-width:490px){
