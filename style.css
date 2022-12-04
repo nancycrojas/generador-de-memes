@@ -404,4 +404,7 @@ input[type="color"] {
     .canvas-meme .image-text {
         font-size: 30px;
     }
+    aside {
+        width: 100vw;
+    }
 }

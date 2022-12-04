@@ -103,7 +103,6 @@ inputColor.addEventListener("blur", (event) => {
 
 // Cambiar modo de mezcla de fondo
 optionsBlend.addEventListener("change", (event)=>{
-  console.log(event.target.value);
   if(event.target.value == 'Ninguno'){
     descargarImagen.style.backgroundBlendMode = 'unset'
   }
@@ -134,7 +133,6 @@ inputOpacidad.addEventListener("change", (event)=>{
 })
 
 inputContraste.addEventListener("change", (event)=>{
-  console.log('event');
   descargarImagen.style.filter = `contrast(${event.target.value}%)`
 })
 
@@ -173,20 +171,17 @@ inputBottomText.addEventListener("input", (event)=>{
 })
 
 // Remover texto superior
-noTopText.addEventListener("click", (event) => {
- console.log(event);
+noTopText.addEventListener("click", () => {
  imageTextTop.classList.toggle("hidden");
 });
 
 // Remover texto inferior
-noBottomText.addEventListener("click", (event) => {
-  console.log(event);
+noBottomText.addEventListener("click", () => {
   imageTextBottom.classList.toggle("hidden");
  });
 
 // Cambiar familia de fuente
 font.addEventListener("change",(event)=>{
-  console.log(event.target.value);
   if(event.target.value == 'Arial'){
     imageTextTop.style.fontFamily = 'Arial, Helvetica, sans-serif'
     imageTextBottom.style.fontFamily = 'Arial, Helvetica, sans-serif'
@@ -227,28 +222,24 @@ font.addEventListener("change",(event)=>{
 
 // Cambiar tamaño de fuente
 fontSize.addEventListener("input",(event)=>{
-  console.log(event.target.value);
   imageTextTop.style.fontSize = `${event.target.value}px`
   imageTextBottom.style.fontSize = `${event.target.value}px`
 });
 
 //Cambiar alineación
 alignLeft.addEventListener("click",(event)=>{
-  console.log(event.target.value);
   event.preventDefault();
   imageTextTop.style.textAlign = 'left'
   imageTextBottom.style.textAlign = 'left'
 })
 
 alignCenter.addEventListener("click",(event)=>{
-  console.log(event.target.value);
   event.preventDefault();
   imageTextTop.style.textAlign = 'center'
   imageTextBottom.style.textAlign = 'center'
 })
 
 alignRight.addEventListener("click",(event)=>{
-  console.log(event.target.value);
   event.preventDefault();
   imageTextTop.style.textAlign = 'right'
   imageTextBottom.style.textAlign = 'right'
@@ -263,15 +254,13 @@ inputColorLetter.addEventListener("blur", (event) => {
 
 // Cambiar color de fondo de texto
 inputColorBackground.addEventListener("blur", (event)=>{
-  console.log(event);
   imageTextTop.style.backgroundColor = event.target.value
   imageTextBottom.style.backgroundColor = event.target.value
   spanColorBg.innerHTML = event.target.value;
 });
 
 // Fondo transparente
-checkboxBackground.addEventListener("change", (event)=>{
-  console.log(event);
+checkboxBackground.addEventListener("change", ()=>{
   if(checkboxBackground.checked){
     imageTextTop.style.backgroundColor = 'transparent';
     imageTextBottom.style.backgroundColor = 'transparent';
@@ -311,14 +300,12 @@ btnNone.addEventListener("click", (event) =>{
 
 // Cambiar padding de texto
 spacing.addEventListener("input",(event)=>{
-  console.log(event.target.value);
   imageTextTop.style.padding = `${event.target.value}px`
   imageTextBottom.style.padding = `${event.target.value}px`
 });
 
 // Cambiar alto de línea de texto
 formLineSpacing.addEventListener("input",(event)=>{
-  console.log(event.target.value);
   if(event.target.value == '0.8'){
     imageTextTop.style.lineHeight = '0.8'
     imageTextBottom.style.lineHeight = '0.8'
@@ -369,6 +356,3 @@ const resetearFiltros = () => {
 };
 
 btnReseat.addEventListener("click", resetearFiltros);
-
-
-
